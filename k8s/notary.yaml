@@ -1,6 +1,11 @@
 apiVersion: kyverno.io/v2beta1
 kind: ClusterPolicy
 metadata:
+  annotations:
+    policies.kyverno.io/title: Verify Image Notary
+    policies.kyverno.io/category: DISA Compliance
+    policies.kyverno.io/severity: medium
+    policies.kyverno.io/subject: Pod
   name: check-image-notary
 spec:
   validationFailureAction: Audit
@@ -20,7 +25,7 @@ spec:
               - Pod
             namespaces:
               - nirmata
-              - cs-operator
+              - nirmata-system
               - kube-system
               - kyverno 
       verifyImages:

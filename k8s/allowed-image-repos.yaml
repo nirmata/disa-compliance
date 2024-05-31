@@ -4,7 +4,7 @@ metadata:
   name: allowed-image-repos
   annotations:
     policies.kyverno.io/title: Allowed Image Repositories
-    policies.kyverno.io/category: Other
+    policies.kyverno.io/category: DISA Compliance
     policies.kyverno.io/severity: medium
     kyverno.io/kyverno-version: 1.9.0
     kyverno.io/kubernetes-version: "1.24"
@@ -32,7 +32,7 @@ spec:
               - Pod
             namespaces:
               - nirmata
-              - cs-operator
+              - nirmata-system
               - kube-system
               - kyverno 
       validate:
