@@ -4,7 +4,7 @@ metadata:
   name: detect-untrusted-flag
   annotations:
     policies.kyverno.io/title: Check for untrusted flag in Dockerfile
-    policies.kyverno.io/category: Dockerfile Best Practices
+    policies.kyverno.io/category: DISA Compliance
     policies.kyverno.io/severity: medium
     policies.kyverno.io/description: >-
       This policy ensures that Dockerfile do not contain the '--allow-untrusted' flag.

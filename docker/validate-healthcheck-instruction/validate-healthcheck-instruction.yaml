@@ -4,7 +4,7 @@ metadata:
   name: validate-healthcheck-instruction
   annotations:
     policies.kyverno.io/title: Validate Healthcheck Instruction
-    policies.kyverno.io/category: Dockerfile Best Practices
+    policies.kyverno.io/category: DISA Compliance
     policies.kyverno.io/severity: medium
     policies.kyverno.io/description: >-
       This policy checks if the HEALTHCHECK instruction is defined in the Dockerfile.

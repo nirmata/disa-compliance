@@ -5,7 +5,7 @@ metadata:
   name: validate-expose-port-8080
   annotations:
     policies.kyverno.io/title: Validate Exposure of Ports in Dockerfile
-    policies.kyverno.io/category: Dockerfile Best Practices
+    policies.kyverno.io/category: DISA Compliance
     policies.kyverno.io/severity: medium
     policies.kyverno.io/description: >-
       This policy ensures that the Dockerfile exposes only the essential ports (8080, 22, 443, 80) for the service being implemented.

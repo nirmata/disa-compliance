@@ -4,7 +4,7 @@ metadata:
   name: disallow-sudo-operations
   annotations:
     policies.kyverno.io/title: Check for sudo operation existence
-    policies.kyverno.io/category: Dockerfile Best Practices
+    policies.kyverno.io/category: DISA Compliance
     policies.kyverno.io/severity: medium
     policies.kyverno.io/description: >-
       Using sudo within a Dockerfile is not recommended to avoid privilege escalation.

@@ -4,7 +4,7 @@ metadata:
   name: validate-run-instruction
   annotations:
     policies.kyverno.io/title: Validate RUN instruction in Dockerfile
-    policies.kyverno.io/category: Dockerfile Best Practices
+    policies.kyverno.io/category: DISA Compliance
     policies.kyverno.io/severity: medium
     policies.kyverno.io/description: >-
       This policy checks if the Dockerfile contains a RUN instruction. If the RUN instruction is not present, the policy fails.

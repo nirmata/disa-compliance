@@ -4,7 +4,7 @@ metadata:
   name: validate-environment-variables
   annotations:
     policies.kyverno.io/title: Ensure Absence of Sensitive Environment Variables in Dockerfile
-    policies.kyverno.io/category: Dockerfile Best Practices
+    policies.kyverno.io/category: DISA Compliance
     policies.kyverno.io/severity: medium
     policies.kyverno.io/description: >-
       This policy checks if the Dockerfile contains definitions for ACCESS_KEY and ACCESS_SECRET variables. If the ACCESS_KEY or ACCESS_SECRET variable is defined with a value, the policy fails.

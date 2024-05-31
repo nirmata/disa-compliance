@@ -4,7 +4,7 @@ metadata:
   name: check-run-using-apt
   annotations:
     policies.kyverno.io/title: Check if the apt is used in the Dockerfile 
-    policies.kyverno.io/category: Dockerfile Best Practices
+    policies.kyverno.io/category: DISA Compliance
     policies.kyverno.io/severity: medium
     policies.kyverno.io/description: >-
        This policy ensures that APT isn’t used in the Dockerfile

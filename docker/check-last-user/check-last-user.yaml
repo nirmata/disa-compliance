@@ -4,7 +4,7 @@ metadata:
   name: check-last-user
   annotations:
     policies.kyverno.io/title: Check last USER
-    policies.kyverno.io/category: Dockerfile Best Practices
+    policies.kyverno.io/category: DISA Compliance
     policies.kyverno.io/severity: medium
     policies.kyverno.io/description: >-
       This policy validates that the last USER is not root.
