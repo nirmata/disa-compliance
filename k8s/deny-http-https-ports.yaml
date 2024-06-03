@@ -1,0 +1,22 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: deny-http-https-ports
+spec:
+  rules:
+  - name: deny-ports-80-443
+    match:
+      resources:
+        kinds:
+        - Pod
+    validate:
+      message: "Using ports 80 and 443 is not allowed."
+      deny:
+        conditions:
+          all:
+          - key: "{{request.object.spec.containers[].ports[].containerPort}}"
+            operator: AnyIn
+            value:
+            - 80
+            - 443
+
