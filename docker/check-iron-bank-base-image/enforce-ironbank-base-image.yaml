@@ -4,7 +4,7 @@ metadata:
   name: enforce-ironbank-base-image
   annotations:
     policies.kyverno.io/title: Enforce Iron Bank Base Image
-    olicies.kyverno.io/category: DISA Compliance
+    policies.kyverno.io/category: DISA Compliance
     policies.kyverno.io/severity: medium
     policies.kyverno.io/description: >-
       This policy ensures that the Dockerfile base image comes from the Iron Bank registry, which is the DoD trusted repository for container images.
