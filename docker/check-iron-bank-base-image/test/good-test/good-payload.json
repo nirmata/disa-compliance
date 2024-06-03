@@ -1,0 +1,67 @@
+{
+    "MetaArgs": null,
+    "Stages": [
+      {
+        "Name": "",
+        "BaseName": "test/jenkins:2.59",
+        "Platform": "",
+        "Comment": "",
+        "SourceCode": "FROM test/jenkins:2.59",
+        "Location": [
+          {
+            "Start": {
+              "Line": 2,
+              "Character": 0
+            },
+            "End": {
+              "Line": 2,
+              "Character": 0
+            }
+          }
+        ],
+        "From": {
+          "Image": "harbor.cloudiolite-demo.karthikconsulting.com/jenkins:2.59"
+        },
+        "Commands": [
+          {
+            "CmdLine": [
+              "apt-get update && apt-get install -y additional-package"
+            ],
+            "Files": null,
+            "FlagsUsed": [],
+            "Name": "RUN",
+            "PrependShell": true
+          },
+          {
+            "Chmod": "",
+            "Chown": "",
+            "DestPath": "/usr/local/etc/jenkins/custom-config.xml",
+            "From": "",
+            "Link": false,
+            "Name": "COPY",
+            "SourceContents": null,
+            "SourcePaths": [
+              "custom-config.xml"
+            ]
+          },
+          {
+            "Name": "EXPOSE",
+            "Ports": [
+              "8080"
+            ]
+          },
+          {
+            "CmdLine": [
+              "java",
+              "-jar",
+              "/usr/local/bin/jenkins.war"
+            ],
+            "Files": null,
+            "Name": "CMD",
+            "PrependShell": false
+          }
+        ]
+      }
+    ]
+  }
+  

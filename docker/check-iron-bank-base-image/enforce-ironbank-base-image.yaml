@@ -1,0 +1,23 @@
+apiVersion: json.kyverno.io/v1alpha1
+kind: ValidatingPolicy
+metadata:
+  name: enforce-ironbank-base-image
+  annotations:
+    policies.kyverno.io/title: Enforce Iron Bank Base Image
+    olicies.kyverno.io/category: DISA Compliance
+    policies.kyverno.io/severity: medium
+    policies.kyverno.io/description: >-
+      This policy ensures that the Dockerfile base image comes from the Iron Bank registry, which is the DoD trusted repository for container images.
+spec:
+  rules:
+    - name: enforce-ironbank-base-image
+      match:
+        any:
+        - (Stages[].From | length(@) > `0`): true
+      assert:
+        any:
+        - message: The Dockerfile base image must be pulled from the Iron Bank registry.
+          check:
+            ~.(Stages[].From.Image):
+                (starts_with(@, 'harbor.cloudiolite-demo.karthikconsulting.com/')): true
+       
