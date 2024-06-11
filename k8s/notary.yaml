@@ -32,7 +32,7 @@ spec:
       - type: Notary
         mutateDigest: false
         imageReferences:
-        - "ghcr.io/kyverno/test-verify-image*"
+        - "nginx*"
         attestors:
         - count: 1
           entries:
